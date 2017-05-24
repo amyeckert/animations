@@ -1,13 +1,21 @@
+
+@font-face {
+  font-family: 'Majesti-Banner-Heavy';
+  src: url('fonts/Majesti-Banner-Heavy.eot'); /* IE9 Compat Modes */
+  src: url('fonts/Majesti-Banner-Heavy.eot?#iefix') format('embedded-opentype') 
+       url('fonts/Majesti-Banner-Heavy.woff2') format('woff2'), 
+       url('fonts/Majesti-Banner-Heavy.woff') format('woff'), 
+       url('fonts/Majesti-Banner-Heavy.ttf')  format('truetype'), 
+       url('fonts/Majesti-Banner-Heavy.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
 .wrapper {
-    /*display: block;
-    min-height: 100vh;*/
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     min-height: 100vh;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-
 }
 h1 {
     display: block;
@@ -19,16 +27,29 @@ h1 {
 }
 .flex-container {
     height: 50vh;
-    flex: 1 1 300px;
+    flex: 1 1 500px;
     display: block;
-    border: 1px solid pink;
-
+/*    border: 1px solid pink;*/
 }
 .letter {
     transform: translateX(-50%);
     margin-left: 50%;
 }
-/*--------- E ----------*/
+/*--------- A ----------*/
+.a-container {
+    color: #a84420;
+    font-family: 'Majesti-Banner-Heavy', sans-serif;
+}
+
+/*--------- M ----------*/
+.m-container {
+    color: #5f9797;
+}
+/*--------- Y ----------*/
+.y-container {
+    color: #8a5cd1;
+}
+
 .e-container {
 }
 .e {
@@ -36,7 +57,6 @@ h1 {
     color: rgba(72, 102, 251, 1);
 }
 /*--------- c ----------*/
-
 .c-container {
     position: relative;
 }
@@ -53,15 +73,13 @@ h1 {
     left: 5px;
     color: hsl(130, 89%, 32%);
     opacity: 0.8;
-
 }
 .c3 {
     position: absolute;
     top: 10px;
     left: 10px;
     color: hsl(128, 34%, 63%);
-    opacity: 0.8;
-    
+    opacity: 0.8;  
 }
 .c4 {
     position: absolute;
@@ -73,8 +91,30 @@ h1 {
      
 /*--------- K ----------*/
 .k-container {
+    color: rgba(152, 152, 62, 1);
+    filter: blur(0px);
+    transition: all 0.5s;
 
 }
-.k {
-    color: rgba(152, 152, 62, 1);
+.k-container:hover {
+    filter: blur(70px);
 }
+/*--------- E2 ----------*/
+.e2-container{
+    color: #b56618;
+    
+}
+
+/*--------- R ----------*/
+.r-container{
+    color: #68b7d5;
+}
+
+/*--------- T ----------*/
+.t-container {
+    color: #820064;
+}
+
+
+
+

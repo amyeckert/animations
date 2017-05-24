@@ -25,7 +25,6 @@ function echo(e) {
         ${xWalk * 0.3}px ${yWalk * 0.3}px 0 rgba(72, 102, 251, 0.7)
    `;
 }
-
 function layers(e){
     const c1 = document.querySelector('.c1');
     const c2 = document.querySelector('.c2');
@@ -46,7 +45,10 @@ function layers(e){
     c3.style.zIndex = `${layerOrder3}`;
     c4.style.zIndex = `${layerOrder4}`;
 }
-
+function fizzle(e){
+    const kContainer = document.querySelector('k-container');
+    const letterK = document.querySelector('.k');
+}
 
 // debounce() limits the window.scrolled event, needs a function to limit as param, limit to 20 millisec, or other amount.
     function debounce(func, wait = 15, immediate = true) {

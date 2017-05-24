@@ -1,0 +1,76 @@
+.wrapper {
+    /*display: block;
+    min-height: 100vh;*/
+    display: flex;
+    flex-flow: row nowrap;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+h1 {
+    display: block;
+    font-size: 20em;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    margin: 0 0 0 0 ;
+    padding: 0 0 0 0 ;
+}
+.flex-container {
+    height: 50vh;
+    flex: 1 1 300px;
+    display: block;
+    border: 1px solid pink;
+
+}
+.letter {
+    transform: translateX(-50%);
+    margin-left: 50%;
+}
+/*--------- E ----------*/
+.e-container {
+}
+.e {
+    color: rgba(72, 102, 251, 1);
+}
+/*--------- c ----------*/
+
+.c-container {
+    position: relative;
+}
+.c1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(9, 153, 73, 1);
+
+}
+.c2 {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: rgba(9, 153, 73, 0.8);
+
+}
+.c3 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: rgba(9, 153, 73, 0.6);
+}
+.c4 {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: rgba(9, 153, 73, 0.4);
+}
+        /*20px 20px 0 rgba(9, 153, 73, 0.2),
+        25px 25px 0 rgba(9, 153, 73, 0.1);*/
+/*--------- K ----------*/
+.k-container {
+
+}
+.k {
+    color: rgba(152, 152, 62, 1);
+}

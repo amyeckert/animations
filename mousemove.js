@@ -25,48 +25,54 @@ function echo(e) {
         ${xWalk * 0.3}px ${yWalk * 0.3}px 0 rgba(72, 102, 251, 0.7)
    `;
 }
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
 function layers(e){
-    const c1 = document.querySelector('.c1');
-    const c2 = document.querySelector('.c2');
-    const c3 = document.querySelector('.c3');
-    const c4 = document.querySelector('.c4');
-    const opacity = Math.random();
-    const layerOrder1 = Math.floor((Math.random() * 4) + 1);
-    const layerOrder2 = Math.floor((Math.random() * 4) + 1);
-    const layerOrder3 = Math.floor((Math.random() * 4) + 1);
-    const layerOrder4 = Math.floor((Math.random() * 4) + 1);
+    const letterC = document.querySelector('.c-container');
+    let shadowR = getRandomNumber(0, 255);
+    let shadowG = getRandomNumber(0, 255);
+    let shadowB = getRandomNumber(0, 255);
+    // let minOpacity = 0;
+    // let maxOpacity = 1;
+    // let opacity = Math.random();
+    console.log(shadowR, shadowG, shadowB);
+    // const layerOrder1 = Math.floor((Math.random() * 4) + 1);
+    // const layerOrder2 = Math.floor((Math.random() * 4) + 1);
+    // const layerOrder3 = Math.floor((Math.random() * 4) + 1);
+    // const layerOrder4 = Math.floor((Math.random() * 4) + 1);
     
-    const { offsetWidth: width, offsetHeight: height } = cContainer;
-    const cHalfWidth = cContainer.offsetWidth - (cContainer.offsetWidth / 2);
-    const cHalfHeight = cContainer.offsetHeight - (cContainer.offsetHeight / 2);
+    // const { offsetWidth: width, offsetHeight: height } = cContainer;
+    // const cHalfWidth = cContainer.offsetWidth - (cContainer.offsetWidth / 2);
+    // const cHalfHeight = cContainer.offsetHeight - (cContainer.offsetHeight / 2);
 
-    c1.style.zIndex = `${layerOrder1}`;
-    c2.style.zIndex = `${layerOrder2}`;
-    c3.style.zIndex = `${layerOrder3}`;
-    c4.style.zIndex = `${layerOrder4}`;
+    letterC.style.backgroundColor = `
+        rgba(${shadowR}, ${shadowG}, ${shadowB}, 0.5) 
+    `;
+   
 }
 function fizzle(e){
     const kContainer = document.querySelector('k-container');
     const letterK = document.querySelector('.k');
 }
 
-// debounce() limits the window.scrolled event, needs a function to limit as param, limit to 20 millisec, or other amount.
-    function debounce(func, wait = 15, immediate = true) {
-      var timeout;
-      return function() {
+// debounce() limits the window.scrolled event, needs a function to limit as param, limit in millisec.
+function debounceLayers(func, wait = 20, immediate = true) {
+    var timeout;
+    return function() {
         var context = this, args = arguments;
         var later = function() {
-          timeout = null;
-          if (!immediate) func.apply(context, args);
+            timeout = null;
+            if (!immediate) func.apply(context, args);
         };
         var callNow = immediate && !timeout;
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
         if (callNow) func.apply(context, args);
-      };
     };
+};
 
 
 
 eContainer.addEventListener('mousemove', echo);
-cContainer.addEventListener('mousemove', debounce(layers));
+cContainer.addEventListener('mousemove', debounceLayers(layers));

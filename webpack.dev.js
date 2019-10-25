@@ -5,6 +5,7 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = merge(common, {
   mode: "development",
+  devtool: 'inline-source-map',
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist")
@@ -19,9 +20,9 @@ module.exports = merge(common, {
       {
         test: /\.scss$/,
         use: [
-          "style-loader", //3. Inject styles into DOM
-          "css-loader", //2. Turns css into commonjs
-          "sass-loader" //1. Turns sass into css
+          'style-loader',         // 3. Inject styles into DOM
+          'css-loader?sourceMap', // 2. Turns css into commonjs
+          'sass-loader?sourceMap' // 1. Turns sass into css
         ]
       }
     ]

@@ -1,5 +1,3 @@
-
-
 const eContainer = document.querySelector('.wrapper');
 const letterE = document.querySelector('.e');
 let walk = 100; // 100px

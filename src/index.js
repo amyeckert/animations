@@ -1,10 +1,10 @@
 import { mousemove } from "./app/app";
-
 import "./main.scss";
+
 mousemove();
 console.log("hey");
 
-
+// OLD from demo:
 // import { run } from "./app/app";
 // import "./main.scss";
 // import { AlertService } from "./app/alert.service";

@@ -1,7 +1,8 @@
 import { echo } from "./functionality/echo";
-import { layers } from "./functionality/layers";
+import { layers } from "./functionality/random-color-bg";
 import { fizzle} from "./functionality/fizzle";
 const eContainer = document.querySelector('.wrapper');
+const cContainer = document.querySelector('.c-container');
 
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;

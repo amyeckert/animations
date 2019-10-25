@@ -1,7 +1,7 @@
 {
-  "name": "animations sandbox",
+  "name": "animations",
   "version": "1.0.0",
-  "description": "",
+  "description": "A sandbox for svg animations and webpack",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --open",

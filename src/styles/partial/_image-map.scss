@@ -1,0 +1,28 @@
+.image-map {
+
+  @include bem-e('container') {
+    position: relative;
+  }
+
+  @include bem-e('img') {
+    
+  }
+
+  @include bem-e('nav') {
+
+  }
+
+  @include bem-e('nav-item') {
+    
+    area {
+
+      &::before {
+        opacity: .6;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

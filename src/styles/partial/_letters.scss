@@ -1,75 +1,62 @@
+
+
+// flex containers
 .flex-container {
-  display: flex;
-  flex: 1 1 0;
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // flex: 1 1 0;
 }
 
 .letter {
   padding: 0;
   height: 100%;
-  font-family: $base-font;
-  font-size: 5em;
   text-transform: uppercase;
-  
-  //background-color: orange;
-}
+  font-size: 25rem;
+  font-family: $base-font;
 
-//--------- A ----------
+  @include bem-m('a') {
+      color: #a84420;
+  }
 
-.a-container {
-  color: #a84420;
-}
-
-//--------- M ----------
-
-.m-container {
+  @include bem-m('m') {
     color: #5f9797;
+
+  }
+
+  @include bem-m('y') {
+    color: #8a5cd1;
+  }
+
+  @include bem-m('e1') {
+    color: rgba(72, 102, 251, 1);
+  }
+
+  @include bem-m('c') {
+    color: white;
+  }
+
+  @include bem-m('k') {
+    color: rgba(152, 152, 62, 1);
+    transition: all .5s;
+    filter: blur(0);
+
+    &:hover {
+      filter: blur(100px);
+    }
+  }
+
+  @include bem-m('e2') {
+    color: #b56618;
+  }
+
+  @include bem-m('r') {
+    color: #68b7d5;
+  }
+
+  @include bem-m('t') {
+    color: #820064;
+  }
+
 }
-
-//--------- Y ----------
-
-.y-container {
-  color: #8a5cd1;
-}
-
-//--------- E ----------
-.e-container {}
-
-.e {
-  color: rgba(72, 102, 251, 1);
-}
-
-//--------- c ----------
-.c-container {
-  color: white;
-}
-    
-//--------- K ----------
-.k-container {
-  color: rgba(152, 152, 62, 1);
-  transition: all .5s;
-  filter: blur(0);
-}
-
-.k-container:hover {
-  filter: blur(100px);
-}
-
-//--------- E2 ----------
-.e2-container{
-  color: #b56618;
-    
-}
-
-//--------- R ----------
-.r-container{
-  color: #68b7d5;
-}
-
-//--------- T ----------
-.t-container {
-  color: #820064;
-}
-
-
-
 

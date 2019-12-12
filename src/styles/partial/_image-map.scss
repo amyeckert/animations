@@ -1,6 +1,7 @@
 .image-map {
 
   @include bem-e('container') {
+      display: none;
     position: relative;
     margin: 0 auto;
   }

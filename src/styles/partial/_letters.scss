@@ -33,7 +33,7 @@
   }
 
   @include bem-m('c') {
-    color: white;
+    color: goldenrod;
   }
 
   @include bem-m('k') {
@@ -57,6 +57,5 @@
   @include bem-m('t') {
     color: #820064;
   }
-
 }
 

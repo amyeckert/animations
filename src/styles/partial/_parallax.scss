@@ -11,8 +11,8 @@
             perspective-origin-x: 100%;
             scroll-behavior: smooth;
             opacity: 0.3;
-            max-width: 50%;
-            margin: 0 auto;
+            // max-width: 50%;
+            // margin: 0 auto;
 
             @include bem-e('group') {
                 position: relative;
